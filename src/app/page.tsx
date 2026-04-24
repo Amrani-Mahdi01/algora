@@ -6,7 +6,9 @@ import Process from "@/components/sections/Process";
 import FeaturedWork from "@/components/sections/FeaturedWork";
 import WorkParallax from "@/components/sections/WorkParallax";
 import Industries from "@/components/sections/Industries";
+import Testimonials from "@/components/sections/Testimonials";
 import Insights from "@/components/sections/Insights";
+import CTABanner from "@/components/sections/CTABanner";
 import Contact from "@/components/sections/Contact";
 
 export default function HomePage() {
@@ -20,7 +22,9 @@ export default function HomePage() {
       <FeaturedWork />
       <WorkParallax />
       <Industries />
+      <Testimonials />
       <Insights />
+      <CTABanner />
       <Contact />
     </>
   );
