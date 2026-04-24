@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position:  1000px 0; }
+}
+@keyframes slideDown {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0);     opacity: 1; }
+}
+@keyframes slideUp {
+  0%   { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-20px); }
+}
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 1; }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(1.08); }
+}
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.12); }
+}
+@keyframes dot-blink {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1;   }
+}
+@keyframes bracket-fade {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 0.6;  }
+}
+@keyframes tick-shift {
+  0%, 100% { transform: translateX(0);   opacity: 0.18; }
+  50%       { transform: translateX(4px); opacity: 0.4;  }
+}
+
+/* ============================================================
+   Theme Tokens  (overridden per [data-theme])
+   ============================================================ */
+
+:root {
+  /* Dark mode defaults */
+  --bg:                #070707;
+  --bg-card:           #0a0a0a;
+  --bg-lighter:        #1f1f1f;
+
+  /* RGB components for rgba() use */
+  --rgb:               255, 255, 255;
+
+  /* Solid text for gradients & direct color */
+  --text-solid:        #ffffff;
+  --text-grad-end:     #B8B8B8;
+
+  /* Glass surfaces */
+  --glass-bg:          rgba(7,  7,  7,  0.78);
+  --glass-bright-bg:   rgba(20, 20, 20, 0.90);
+  --glass-border:      hsla(0, 0%, 100%, 0.1);
+
+  /* Scrollbar */
+  --sb-thumb:          #2a2a2a;
+  --sb-hover:          #444444;
+}
+
+[data-theme="light"] {
+  --bg:                #f2f2f2;
+  --bg-card:           #ffffff;
+  --bg-lighter:        #e4e4e4;
+
+  --rgb:               10, 10, 10;
+
+  --text-solid:        #0d0d0d;
+  --text-grad-end:     #555555;
+
+  --glass-bg:          rgba(242, 242, 242, 0.85);
+  --glass-bright-bg:   rgba(255, 255, 255, 0.94);
+  --glass-border:      hsla(0, 0%, 0%, 0.1);
+
+  --sb-thumb:          #c0c0c0;
+  --sb-hover:          #888888;
+}
+
+/* ============================================================
+   Tailwind Design Tokens
+   ============================================================ */
+
+@theme {
+  --color-primary:         #ffffff;
+  --color-heading:         var(--text-solid);
+  --color-base:            rgba(var(--rgb), 0.65);
+  --color-lighter:         var(--bg-lighter);
+  --color-black:           var(--bg);
+  --color-border:          rgba(var(--rgb), 0.1);
+  --color-subtitle-bg:     rgba(var(--rgb), 0.05);
+  --color-subtitle-text:   rgba(var(--rgb), 0.5);
+  --color-subtitle-border: rgba(var(--rgb), 0.1);
+
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-geist-sans);
+
+  --animate-marquee:    marquee   15s linear     infinite;
+  --animate-shimmer:    shimmer   3s  linear      infinite;
+  --animate-slideDown:  slideDown 0.3s ease-out;
+  --animate-slideUp:    slideUp   0.3s ease-out;
+  --animate-fade-up:    fade-up   0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-float:      float     6s  ease-in-out infinite;
+  --animate-fadeInOut:  fadeInOut 6s  ease-in-out infinite;
+  --animate-pulse-glow:    pulse-glow    4s ease-in-out infinite;
+  --animate-glow-breathe:  glow-breathe  6s ease-in-out infinite;
+  --animate-dot-blink:     dot-blink     3s ease-in-out infinite;
+  --animate-bracket-fade:  bracket-fade  5s ease-in-out infinite;
+  --animate-tick-shift:    tick-shift    4s ease-in-out infinite;
+}
+
+/* ============================================================
+   Global Base
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: rgba(var(--rgb), 0.65);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================================
+   Composable Utilities
+   ============================================================ */
+
+.title-gradient-text {
+  background: linear-gradient(180deg, var(--text-solid) 15.62%, var(--text-grad-end) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle-pill {
+  background: rgba(var(--rgb), 0.05);
+  border: 1px solid rgba(var(--rgb), 0.1);
+  color: rgba(var(--rgb), 0.5);
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.glass-bright {
+  background: var(--glass-bright-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+}
+
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(var(--rgb), 0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+
+::-webkit-scrollbar           { width: 5px; }
+::-webkit-scrollbar-track     { background: var(--bg); }
+::-webkit-scrollbar-thumb     { background: var(--sb-thumb); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--sb-hover); }
+
+/* ============================================================
+   Selection
+   ============================================================ */
+
+::selection { background: rgba(var(--rgb), 0.12); color: var(--text-solid); }
+
+/* ============================================================
+   Arabic Typography
+   ============================================================ */
+
+html[lang="ar"] body,
+html[lang="ar"] p,
+html[lang="ar"] span,
+html[lang="ar"] a,
+html[lang="ar"] li,
+html[lang="ar"] button {
+  font-family: var(--font-cairo), system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6,
+html[lang="ar"] .font-display {
+  font-family: var(--font-cairo), system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .font-mono {
+  font-family: var(--font-cairo), system-ui, sans-serif;
+  letter-spacing: 0;
+}
