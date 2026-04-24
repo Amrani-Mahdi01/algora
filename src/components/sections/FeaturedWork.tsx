@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ShinyText from "@/components/ui/ShinyText";
 
 export default function FeaturedWork() {
   const { t } = useLanguage();
@@ -60,16 +61,16 @@ export default function FeaturedWork() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 pb-10 border-b" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
           <div>
-            <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block" style={{ color: "rgba(var(--rgb),0.35)" }}>
-              {t("wk_label")}
+            <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block">
+              <ShinyText text={t("wk_label")} speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
             </span>
             <h2 className="font-display title-gradient-text text-3xl sm:text-[2.2rem] lg:text-[2.6rem]" style={{ fontWeight: 600 }}>
               {t("wk_title1")}<br />{t("wk_title2")}
             </h2>
           </div>
           <div className="flex flex-col items-start lg:items-end gap-4">
-            <p className="text-sm max-w-xs lg:text-right leading-relaxed" style={{ color: "rgba(var(--rgb),0.38)" }}>
-              {t("wk_sub")}
+            <p className="text-sm max-w-xs lg:text-right leading-relaxed">
+              <ShinyText text={t("wk_sub")} speed={10} color="rgba(var(--rgb),0.35)" shineColor="rgba(var(--rgb),0.65)" />
             </p>
             <Link href="/work"
               className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wider uppercase transition-colors duration-200"

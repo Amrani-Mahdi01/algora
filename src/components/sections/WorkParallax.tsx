@@ -2,6 +2,7 @@
 
 import { HeroParallax } from "@/components/ui/HeroParallax";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ShinyText from "@/components/ui/ShinyText";
 
 const PRODUCTS = [
   // Row 1 (right → left)
@@ -32,11 +33,8 @@ export default function WorkParallax() {
 
   const header = (
     <div className="max-w-2xl">
-      <span
-        className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block"
-        style={{ color: "rgba(var(--rgb),0.35)" }}
-      >
-        {C.label}
+      <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block">
+        <ShinyText text={C.label} speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
       </span>
       <h2
         className="font-display title-gradient-text text-3xl sm:text-[2.2rem] lg:text-[2.6rem] mb-5"

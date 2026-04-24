@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ShinyText from "@/components/ui/ShinyText";
 
 export default function Process() {
   const { t } = useLanguage();
@@ -22,15 +23,15 @@ export default function Process() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
           <div>
-            <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block" style={{ color: "rgba(var(--rgb),0.35)" }}>
-              {t("pr_label")}
+            <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block">
+              <ShinyText text={t("pr_label")} speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
             </span>
             <h2 className="font-display title-gradient-text text-3xl sm:text-[2.2rem] lg:text-[2.6rem]" style={{ fontWeight: 600 }}>
               {t("pr_title1")}<br className="hidden sm:block" />{t("pr_title2")}
             </h2>
           </div>
-          <p className="text-sm max-w-xs lg:text-right leading-relaxed" style={{ color: "rgba(var(--rgb),0.4)" }}>
-            {t("pr_sub")}
+          <p className="text-sm max-w-xs lg:text-right leading-relaxed">
+            <ShinyText text={t("pr_sub")} speed={10} color="rgba(var(--rgb),0.38)" shineColor="rgba(var(--rgb),0.65)" />
           </p>
         </motion.div>
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check, Loader2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ShinyText from "@/components/ui/ShinyText";
 
 const SERVICE_OPTS = [
   { id: "web",        en: "Web Application",  fr: "Application Web",    ar: "تطبيق ويب" },
@@ -178,18 +179,16 @@ export default function Contact() {
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 pb-10 border-b"
           style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
           <div>
-            <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block"
-              style={{ color: "rgba(var(--rgb),0.35)" }}>
-              {L.label}
+            <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-4 block">
+              <ShinyText text={L.label} speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
             </span>
             <h2 className="font-display title-gradient-text text-3xl sm:text-[2.2rem] lg:text-[2.6rem]"
               style={{ fontWeight: 600 }}>
               {L.title1}<br />{L.title2}
             </h2>
           </div>
-          <p className="text-sm max-w-xs lg:text-right leading-relaxed"
-            style={{ color: "rgba(var(--rgb),0.38)" }}>
-            {L.sub}
+          <p className="text-sm max-w-xs lg:text-right leading-relaxed">
+            <ShinyText text={L.sub} speed={10} color="rgba(var(--rgb),0.35)" shineColor="rgba(var(--rgb),0.65)" />
           </p>
         </motion.div>
 
@@ -221,8 +220,9 @@ export default function Contact() {
 
                 {/* 01 Contact */}
                 <div>
-                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5"
-                    style={{ color: "rgba(var(--rgb),0.3)" }}>01 — Contact</p>
+                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5">
+                    <ShinyText text="01 — Contact" speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
+                  </p>
                   <div className="flex flex-col gap-3">
                     {([
                       { key: "name",    label: L.name,    ph: L.namePh,    type: "text",  req: true  },
@@ -244,8 +244,9 @@ export default function Contact() {
 
                 {/* 02 Services */}
                 <div>
-                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5"
-                    style={{ color: "rgba(var(--rgb),0.3)" }}>02 — Services</p>
+                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5">
+                    <ShinyText text="02 — Services" speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
+                  </p>
                   <label className="block text-xs mb-3" style={{ color: "rgba(var(--rgb),0.4)" }}>{L.services}</label>
                   <div className="grid grid-cols-2 gap-2">
                     {SERVICE_OPTS.map(s => {
@@ -274,8 +275,9 @@ export default function Contact() {
 
                 {/* 03 Scope */}
                 <div>
-                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5"
-                    style={{ color: "rgba(var(--rgb),0.3)" }}>03 — Scope</p>
+                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5">
+                    <ShinyText text="03 — Scope" speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
+                  </p>
                   <div className="flex flex-col gap-3">
                     <div>
                       <label className="block text-xs mb-1.5" style={{ color: "rgba(var(--rgb),0.4)" }}>{L.budget}</label>
@@ -308,8 +310,9 @@ export default function Contact() {
 
                 {/* 04 Project Brief */}
                 <div className="flex-1 flex flex-col">
-                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5"
-                    style={{ color: "rgba(var(--rgb),0.3)" }}>04 — Project Brief</p>
+                  <p className="font-mono text-[0.6rem] tracking-[0.18em] uppercase mb-5">
+                    <ShinyText text="04 — Project Brief" speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
+                  </p>
                   <label className="block text-xs mb-1.5" style={{ color: "rgba(var(--rgb),0.4)" }}>{L.message}</label>
                   <textarea required value={form.message} onChange={set("message")}
                     placeholder={L.messagePh} rows={8}

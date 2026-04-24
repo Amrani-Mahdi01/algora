@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ShinyText from "@/components/ui/ShinyText";
 
 export default function CTABanner() {
   const { t } = useLanguage();
@@ -34,8 +35,8 @@ export default function CTABanner() {
 
           <div className="relative z-10 px-10 sm:px-16 py-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-14">
             <div>
-              <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-6 block" style={{ color: "rgba(var(--rgb),0.35)" }}>
-                {t("ct_label")}
+              <span className="font-mono text-[0.6rem] tracking-[0.2em] uppercase mb-6 block">
+                <ShinyText text={t("ct_label")} speed={7} color="rgba(var(--rgb),0.3)" shineColor="rgba(var(--rgb),0.7)" />
               </span>
               <h2 className="font-display text-3xl sm:text-[2.4rem] lg:text-[3rem] leading-[1.1]" style={{ fontWeight: 600 }}>
                 <span className="title-gradient-text">{t("ct_line1")}</span>
