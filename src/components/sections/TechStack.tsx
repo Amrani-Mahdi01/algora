@@ -47,24 +47,24 @@ function MarqueeRow({ items, reverse = false, duration = 36 }: { items: { title:
 export default function TechStack() {
   const { t } = useLanguage();
   return (
-    <section className="relative py-24 overflow-hidden border-t" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
+    <section className="relative py-28 overflow-hidden border-t" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
 
-      {/* ── Purple background elements ── */}
+      {/* ── Background elements ── */}
       <div className="absolute -top-24 -right-24 w-[420px] h-[420px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 65%)", filter: "blur(48px)" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.05) 0%, transparent 65%)", filter: "blur(48px)" }} />
       <div className="absolute -bottom-20 -left-20 w-[360px] h-[360px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 65%)", filter: "blur(44px)", animationDelay: "3s" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.04) 0%, transparent 65%)", filter: "blur(44px)", animationDelay: "3s" }} />
       <div className="absolute top-7 left-7 w-5 h-5 border-t border-l pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.32)" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.1)" }} />
       <div className="absolute bottom-7 right-7 w-5 h-5 border-b border-r pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.32)", animationDelay: "2.5s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.1)", animationDelay: "2.5s" }} />
       <div className="absolute top-14 right-20 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.5)" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.15)" }} />
       <div className="absolute bottom-14 left-20 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.4)", animationDelay: "1.5s" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.12)", animationDelay: "1.5s" }} />
       <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-3 pointer-events-none" aria-hidden>
         {[18, 8, 14, 8, 18].map((w, i) => (
-          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(139,92,246,0.22)", animationDelay: `${i * 0.18}s` }} />
+          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(var(--rgb),0.08)", animationDelay: `${i * 0.18}s` }} />
         ))}
       </div>
 

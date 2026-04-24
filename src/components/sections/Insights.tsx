@@ -24,27 +24,27 @@ export default function Insights() {
   return (
     <section className="relative py-28 border-t overflow-hidden" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
 
-      {/* ── Purple glows ── */}
+      {/* ── Background elements ── */}
       <div className="absolute -top-20 -left-20 w-[420px] h-[420px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 65%)", filter: "blur(48px)" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.05) 0%, transparent 65%)", filter: "blur(48px)" }} />
       <div className="absolute -bottom-16 -right-16 w-[320px] h-[320px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.09) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "3s" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.04) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "3s" }} />
       <div className="absolute top-7 left-7 w-5 h-5 border-t border-l pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.35)" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.12)" }} />
       <div className="absolute bottom-7 right-7 w-5 h-5 border-b border-r pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.35)", animationDelay: "2.5s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.12)", animationDelay: "2.5s" }} />
       <div className="absolute top-16 right-24 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.5)" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.15)" }} />
       <div className="absolute bottom-16 left-24 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.38)", animationDelay: "1.5s" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.1)", animationDelay: "1.5s" }} />
       <div className="absolute right-0 top-1/4 flex flex-col gap-3 pointer-events-none" aria-hidden>
         {[14, 8, 20, 8, 14].map((w, i) => (
-          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(139,92,246,0.23)", animationDelay: `${i * 0.18}s` }} />
+          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(var(--rgb),0.08)", animationDelay: `${i * 0.18}s` }} />
         ))}
       </div>
 
       <div className="absolute inset-0 pointer-events-none select-none" aria-hidden style={{ color: "var(--text-solid)" }}>
-        <svg className="absolute top-1/2 -right-32 -translate-y-1/2" width="640" height="640" viewBox="0 0 640 640" fill="none" style={{ opacity: 0.12, color: "rgb(139,92,246)" }}>
+        <svg className="absolute top-1/2 -right-32 -translate-y-1/2" width="640" height="640" viewBox="0 0 640 640" fill="none" style={{ opacity: 0.06 }}>
           <circle cx="320" cy="320" r="280" stroke="currentColor" strokeWidth="0.8" />
           <circle cx="320" cy="320" r="210" stroke="currentColor" strokeWidth="0.6" />
           <circle cx="320" cy="320" r="140" stroke="currentColor" strokeWidth="0.5" />

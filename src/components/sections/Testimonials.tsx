@@ -85,23 +85,23 @@ function TestimonialCard({ t }: { t: (typeof testimonials)[0] }) {
 export default function Testimonials() {
   return (
     <section className="relative py-28 overflow-hidden">
-      {/* ── Purple background elements ── */}
+      {/* ── Background elements ── */}
       <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[560px] h-[380px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(ellipse, rgba(139,92,246,0.13) 0%, transparent 65%)", filter: "blur(48px)" }} />
+        style={{ background: "radial-gradient(ellipse, rgba(var(--rgb),0.05) 0%, transparent 65%)", filter: "blur(48px)" }} />
       <div className="absolute -bottom-20 -right-20 w-[380px] h-[380px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 65%)", filter: "blur(44px)", animationDelay: "2s" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.04) 0%, transparent 65%)", filter: "blur(44px)", animationDelay: "2s" }} />
       <div className="absolute -bottom-16 -left-16 w-[300px] h-[300px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "4s" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.03) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "4s" }} />
       <div className="absolute top-7 left-7 w-5 h-5 border-t border-l pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.33)" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.1)" }} />
       <div className="absolute top-7 right-7 w-5 h-5 border-t border-r pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.33)", animationDelay: "1.5s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.1)", animationDelay: "1.5s" }} />
       <div className="absolute bottom-7 left-7 w-5 h-5 border-b border-l pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.22)", animationDelay: "3s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.08)", animationDelay: "3s" }} />
       <div className="absolute bottom-7 right-7 w-5 h-5 border-b border-r pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.22)", animationDelay: "4.5s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.08)", animationDelay: "4.5s" }} />
       <div className="absolute top-14 left-1/2 -translate-x-1/2 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.6)" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.2)" }} />
 
       <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <motion.div

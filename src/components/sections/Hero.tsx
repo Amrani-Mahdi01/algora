@@ -66,15 +66,12 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Beams
           beamWidth={1.8} beamHeight={16} beamNumber={8}
-          lightColor="#c4b5fd" backgroundColor="#070707"
+          lightColor="#ffffff" backgroundColor="#070707"
           speed={2.2} noiseIntensity={1.4} scale={0.18} rotation={0}
           onReady={() => setReady(true)}
         />
       </div>
 
-      {/* Deep purple ambient */}
-      <div className="absolute inset-0 z-[5] pointer-events-none" aria-hidden
-        style={{ background: "radial-gradient(ellipse 80% 60% at 50% 42%, rgba(139,92,246,0.20) 0%, transparent 68%)" }} />
 
       <div className="absolute inset-x-0 top-0 h-40 z-10 pointer-events-none"
         style={{ background: "linear-gradient(to bottom, var(--bg) 0%, transparent 100%)" }} aria-hidden />

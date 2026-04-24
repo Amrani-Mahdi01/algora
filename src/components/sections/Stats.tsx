@@ -15,9 +15,9 @@ export default function Stats() {
 
   return (
     <section className="border-t border-b relative overflow-hidden" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
-      {/* Purple edge glow */}
+      {/* Edge glow */}
       <div className="absolute inset-0 pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(ellipse 40% 120% at 100% 50%, rgba(139,92,246,0.14) 0%, transparent 70%)" }} />
+        style={{ background: "radial-gradient(ellipse 40% 120% at 100% 50%, rgba(var(--rgb),0.05) 0%, transparent 70%)" }} />
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-x-0 lg:divide-x lg:divide-y-0" style={{ '--tw-divide-opacity': 1 } as React.CSSProperties}>
           {stats.map((stat, i) => (

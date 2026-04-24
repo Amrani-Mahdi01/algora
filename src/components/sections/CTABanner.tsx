@@ -9,7 +9,7 @@ import ShinyText from "@/components/ui/ShinyText";
 export default function CTABanner() {
   const { t } = useLanguage();
   return (
-    <section className="py-24 px-6 border-t" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
+    <section className="py-28 px-6 border-t" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -21,9 +21,9 @@ export default function CTABanner() {
 
           <div className="absolute inset-0 dot-grid opacity-50" aria-hidden />
 
-          {/* Purple corner glow */}
+          {/* Corner glow */}
           <div className="absolute -bottom-24 -left-24 w-96 h-96 pointer-events-none animate-glow-breathe" aria-hidden
-            style={{ background: "radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 65%)", filter: "blur(40px)" }} />
+            style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.06) 0%, transparent 65%)", filter: "blur(40px)" }} />
 
           <div className="absolute left-0 top-0 bottom-0 w-px" aria-hidden
             style={{ background: `linear-gradient(to bottom, transparent 10%, rgba(var(--rgb),0.2) 40%, rgba(var(--rgb),0.2) 60%, transparent 90%)` }} />

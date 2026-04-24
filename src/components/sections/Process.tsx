@@ -16,9 +16,9 @@ export default function Process() {
 
   return (
     <section className="relative py-28 border-t overflow-hidden" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
-      {/* Purple glow — right side */}
+      {/* Glow — right side */}
       <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.13) 0%, transparent 65%)", filter: "blur(48px)" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.05) 0%, transparent 65%)", filter: "blur(48px)" }} />
       <div className="max-w-7xl mx-auto px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
@@ -39,7 +39,7 @@ export default function Process() {
           {steps.map((step, i) => (
             <motion.div key={step.number} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="border-r border-b p-8 flex flex-col gap-7" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
-              <span className="font-mono text-[3rem] leading-none font-bold select-none" style={{ color: "rgba(139,92,246,0.22)" }}>
+              <span className="font-mono text-[3rem] leading-none font-bold select-none" style={{ color: "rgba(var(--rgb),0.08)" }}>
                 {step.number}
               </span>
               <div className="w-5 h-px" style={{ backgroundColor: "rgba(var(--rgb),0.2)" }} />

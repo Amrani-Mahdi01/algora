@@ -56,26 +56,26 @@ export default function WorkParallax() {
       className="relative border-t overflow-hidden"
       style={{ borderColor: "rgba(var(--rgb),0.1)" }}
     >
-      {/* Purple glows */}
+      {/* Glows */}
       <div className="absolute -top-24 -right-24 w-[460px] h-[460px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.13) 0%, transparent 65%)", filter: "blur(48px)" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.05) 0%, transparent 65%)", filter: "blur(48px)" }} />
       <div className="absolute bottom-1/3 -left-20 w-[340px] h-[340px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.09) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "3s" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.04) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "3s" }} />
 
       {/* Corner brackets */}
       <div className="absolute top-7 left-7 w-5 h-5 border-t border-l pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.35)" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.12)" }} />
       <div className="absolute top-7 right-7 w-5 h-5 border-t border-r pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.35)", animationDelay: "2.5s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.12)", animationDelay: "2.5s" }} />
 
       {/* Dots */}
       <div className="absolute top-16 left-1/2 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.55)" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.18)" }} />
 
       {/* Tick marks */}
       <div className="absolute right-0 top-1/3 flex flex-col gap-3 pointer-events-none" aria-hidden>
         {[14, 8, 20, 8, 14].map((w, i) => (
-          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(139,92,246,0.23)", animationDelay: `${i * 0.18}s` }} />
+          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(var(--rgb),0.08)", animationDelay: `${i * 0.18}s` }} />
         ))}
       </div>
 

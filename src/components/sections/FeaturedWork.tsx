@@ -33,26 +33,26 @@ export default function FeaturedWork() {
   return (
     <section className="relative py-28 border-t overflow-hidden" style={{ borderColor: "rgba(var(--rgb),0.1)" }}>
 
-      {/* ── Purple background elements ── */}
+      {/* ── Background elements ── */}
       <div className="absolute -top-24 -right-24 w-[440px] h-[440px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.13) 0%, transparent 65%)", filter: "blur(48px)" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.05) 0%, transparent 65%)", filter: "blur(48px)" }} />
       <div className="absolute -bottom-20 -left-20 w-[320px] h-[320px] pointer-events-none animate-glow-breathe" aria-hidden
-        style={{ background: "radial-gradient(circle, rgba(139,92,246,0.09) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "2s" }} />
+        style={{ background: "radial-gradient(circle, rgba(var(--rgb),0.04) 0%, transparent 65%)", filter: "blur(40px)", animationDelay: "2s" }} />
       <div className="absolute right-0 inset-y-0 w-px pointer-events-none" aria-hidden
-        style={{ background: "linear-gradient(to bottom, transparent 8%, rgba(139,92,246,0.38) 30%, rgba(139,92,246,0.38) 70%, transparent 92%)" }} />
+        style={{ background: "linear-gradient(to bottom, transparent 8%, rgba(var(--rgb),0.1) 30%, rgba(var(--rgb),0.1) 70%, transparent 92%)" }} />
       <div className="absolute top-7 left-7 w-5 h-5 border-t border-l pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.35)" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.12)" }} />
       <div className="absolute bottom-7 right-7 w-5 h-5 border-b border-r pointer-events-none animate-bracket-fade" aria-hidden
-        style={{ borderColor: "rgba(139,92,246,0.35)", animationDelay: "2.5s" }} />
+        style={{ borderColor: "rgba(var(--rgb),0.12)", animationDelay: "2.5s" }} />
       <div className="absolute top-[4.5rem] right-20 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.55)" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.18)" }} />
       <div className="absolute top-16 right-[5.75rem] w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.3)", animationDelay: "1s" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.1)", animationDelay: "1s" }} />
       <div className="absolute bottom-14 left-24 w-1 h-1 pointer-events-none animate-dot-blink" aria-hidden
-        style={{ backgroundColor: "rgba(139,92,246,0.4)", animationDelay: "2s" }} />
+        style={{ backgroundColor: "rgba(var(--rgb),0.12)", animationDelay: "2s" }} />
       <div className="absolute left-0 top-1/3 flex flex-col gap-3 pointer-events-none" aria-hidden>
         {[14, 8, 18, 8, 14].map((w, i) => (
-          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(139,92,246,0.25)", animationDelay: `${i * 0.18}s` }} />
+          <div key={i} className="h-px animate-tick-shift" style={{ width: w, backgroundColor: "rgba(var(--rgb),0.1)", animationDelay: `${i * 0.18}s` }} />
         ))}
       </div>
 
