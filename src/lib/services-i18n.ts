@@ -443,6 +443,7 @@ export interface SlugI18n {
   faqTitle: readonly string[];
   faqSub: string;
   otherServices: string;
+  viewDetails: string;
   process: readonly SlugProcessStep[];
   services: Record<string, SlugServiceI18n>;
 }
@@ -466,6 +467,7 @@ const SLUG: Record<Lang, SlugI18n> = {
     faqTitle: ["Questions clients", "ask before signing."],
     faqSub: "Honest answers — no marketing language, no vague promises.",
     otherServices: "Other services",
+    viewDetails: "View details",
     process: [
       { number: "01", title: "Discovery & Architecture", desc: "We map your goals, constraints, and existing systems. You get a detailed technical brief and a fixed-scope quote before a single line is written." },
       { number: "02", title: "Sprint-based Development", desc: "Two-week sprints with live demos every cycle. You always see what we're building, can redirect early, and never wait months for a reveal." },
@@ -574,6 +576,7 @@ const SLUG: Record<Lang, SlugI18n> = {
     faqTitle: ["Les questions des clients", "avant de signer."],
     faqSub: "Des réponses honnêtes — pas de jargon marketing, pas de promesses vagues.",
     otherServices: "Autres services",
+    viewDetails: "Voir les détails",
     process: [
       { number: "01", title: "Découverte & Architecture", desc: "Nous cartographions vos objectifs, contraintes et systèmes existants. Vous obtenez un brief technique détaillé et un devis à périmètre fixe avant qu'une seule ligne soit écrite." },
       { number: "02", title: "Développement par Sprints", desc: "Des sprints de deux semaines avec des démos en direct à chaque cycle. Vous voyez toujours ce que nous construisons, pouvez réorienter tôt, et n'attendez jamais des mois pour une révélation." },
@@ -722,6 +725,7 @@ const SLUG: Record<Lang, SlugI18n> = {
     faqTitle: ["أسئلة العملاء", "قبل التوقيع."],
     faqSub: "إجابات صريحة — لا لغة تسويقية، لا وعود مبهمة.",
     otherServices: "خدمات أخرى",
+    viewDetails: "عرض التفاصيل",
     process: [
       { number: "01", title: "الاستكشاف والهندسة المعمارية", desc: "نرسم خريطة لأهدافك وقيودك وأنظمتك الحالية. تحصل على ملخص تقني مفصل وعرض سعر بنطاق ثابت قبل كتابة سطر واحد." },
       { number: "02", title: "التطوير القائم على السبرينت", desc: "سبرينتات من أسبوعين مع عروض تجريبية مباشرة في كل دورة. دائماً ترى ما نبنيه، يمكنك إعادة التوجيه مبكراً، ولا تنتظر أشهراً للاكتشاف." },
