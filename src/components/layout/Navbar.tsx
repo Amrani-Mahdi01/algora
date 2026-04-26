@@ -58,10 +58,10 @@ export default function Navbar() {
   const { t } = useLanguage();
 
   const navLinks = [
+    { label: t("nav_home"),     href: "/" },
     { label: t("nav_services"), href: "/services" },
-    { label: t("nav_work"),     href: "/work" },
-    { label: t("nav_about"),    href: "/about" },
-    { label: t("nav_contact"),  href: "/contact" },
+    { label: t("nav_about"),    href: "#" },
+    { label: t("nav_blogs"),    href: "#" },
   ];
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Navbar() {
 
           <ul className="hidden md:flex items-center gap-9 flex-1 justify-center">
             {navLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.label}>
                 <Link href={link.href}
                   className="relative text-sm font-medium transition-colors duration-200 group"
                   style={{ color: "rgba(var(--rgb),0.6)" }}>
@@ -97,7 +97,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-2">
             <LangToggle />
-            <Link href="/contact"
+            <Link href="#contact"
               className="ml-2 inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold transition-opacity duration-200 hover:opacity-85"
               style={{ backgroundColor: "var(--text-solid)", color: "var(--bg)" }}>
               {t("nav_cta")}
@@ -126,7 +126,7 @@ export default function Navbar() {
 
             <ul className="flex flex-col gap-7">
               {navLinks.map((link, i) => (
-                <motion.li key={link.href} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}>
+                <motion.li key={link.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}>
                   <Link href={link.href} onClick={() => setMobileOpen(false)}
                     className="text-2xl font-display transition-colors"
                     style={{ fontWeight: 600, color: "var(--text-solid)" }}>
@@ -137,7 +137,7 @@ export default function Navbar() {
             </ul>
 
             <div className="mt-auto">
-              <Link href="/contact" onClick={() => setMobileOpen(false)}
+              <Link href="#contact" onClick={() => setMobileOpen(false)}
                 className="block w-full text-center py-4 font-semibold text-base transition-opacity hover:opacity-85"
                 style={{ backgroundColor: "var(--text-solid)", color: "var(--bg)" }}>
                 {t("nav_cta")} →

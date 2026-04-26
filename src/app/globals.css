@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
    Scrollbar
    ============================================================ */
 
-::-webkit-scrollbar           { width: 5px; }
+::-webkit-scrollbar           { width: 8px; }
 ::-webkit-scrollbar-track     { background: var(--bg); }
 ::-webkit-scrollbar-thumb     { background: var(--sb-thumb); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--sb-hover); }

@@ -28,7 +28,7 @@ const COPY = {
 type Lang = "en" | "fr" | "ar";
 
 export default function WorkParallax() {
-  const { lang } = useLanguage();
+  const { lang, isRTL } = useLanguage();
   const C = COPY[lang as Lang] ?? COPY.en;
 
   const header = (
@@ -79,7 +79,7 @@ export default function WorkParallax() {
         ))}
       </div>
 
-      <HeroParallax products={PRODUCTS} header={header} />
+      <HeroParallax products={PRODUCTS} header={header} isRTL={isRTL} />
     </section>
   );
 }

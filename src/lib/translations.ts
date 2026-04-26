@@ -1,11 +1,14 @@
 export const translations = {
   en: {
     // Navbar
+    nav_home:     "Home",
     nav_services: "Services",
-    nav_work:     "Work",
     nav_about:    "About",
-    nav_contact:  "Contact",
-    nav_cta:      "Start a Project",
+    nav_blogs:    "Blogs",
+    nav_cta:      "Contact Us",
+
+    // About
+    ab_text: "We are a software engineering agency from Algeria — building products that compete on the global stage. From early-stage startups to scaling enterprises, we ship web apps, mobile solutions, automation systems, and AI-powered products that last.",
 
     // Hero
     hero_badge:   "Premium Software Agency · MENA",
@@ -31,15 +34,15 @@ export const translations = {
     sv_all:    "All services",
     // Services — items
     sv_01_title: "Web Applications",
-    sv_01_desc:  "Full-stack SaaS platforms, dashboards, and enterprise web apps engineered for performance and scale.",
+    sv_01_desc:  "Full-stack SaaS platforms, dashboards, and enterprise web apps engineered for performance and scale. We handle everything from React/Next.js frontends to Node.js and Python backends, RESTful and GraphQL APIs, and cloud-native deployments on AWS, GCP, or Azure — built to handle real production load from day one.",
     sv_02_title: "Mobile Apps",
-    sv_02_desc:  "Cross-platform iOS & Android with native-quality UX and deep platform integration.",
+    sv_02_desc:  "Cross-platform iOS & Android applications with native-quality UX and deep platform integration. Built with React Native or Flutter, our mobile apps connect to your backend infrastructure, support offline-first architecture, push notifications, biometric auth, and ship through the App Store and Google Play with production-grade reliability.",
     sv_03_title: "Desktop Software",
-    sv_03_desc:  "Windows, macOS, and Linux applications built for the workflows that matter most.",
+    sv_03_desc:  "Windows, macOS, and Linux applications built for the workflows that demand the most from your hardware. Using Electron, Tauri, or fully native stacks, we build desktop tools with local-first data, system-level integrations, hardware access, and enterprise deployment pipelines — no browser required.",
     sv_04_title: "Automation Systems",
-    sv_04_desc:  "End-to-end process automation — data pipelines, RPA bots, and smart workflows.",
+    sv_04_desc:  "End-to-end process automation that eliminates repetitive work and connects your entire software stack. From RPA bots and webhook-driven pipelines to scheduled ETL jobs and custom integrations, we automate the workflows that consume your team's time — with monitoring, error recovery, and full observability built in.",
     sv_05_title: "AI Solutions",
-    sv_05_desc:  "Custom LLM integrations, computer vision, and predictive models that give you a measurable edge.",
+    sv_05_desc:  "Custom AI products built on the latest LLMs, computer vision, and predictive modeling — engineered to deliver real business outcomes. We design and deploy RAG pipelines, fine-tuned domain models, real-time inference APIs, and AI-driven features that integrate cleanly into your existing systems and grow smarter with use.",
 
     // Stack
     st_label:  "— Our Stack",
@@ -125,6 +128,10 @@ export const translations = {
     ct_cta1:   "Start a Project",
     ct_cta2:   "View Our Work",
 
+    // Macbook section
+    mac_title: "Everything you need.",
+    mac_sub:   "Web · Mobile · Desktop · Automation · AI",
+
     // Footer
     ft_tag:    "We engineer world-class software for ambitious businesses — from web apps to AI-powered systems.",
     ft_copy:   "All rights reserved.",
@@ -132,11 +139,14 @@ export const translations = {
   },
 
   fr: {
+    nav_home:     "Accueil",
     nav_services: "Services",
-    nav_work:     "Travaux",
     nav_about:    "À propos",
-    nav_contact:  "Contact",
-    nav_cta:      "Démarrer un projet",
+    nav_blogs:    "Blog",
+    nav_cta:      "Nous contacter",
+
+    // About
+    ab_text: "Nous sommes une agence d'ingénierie logicielle basée en Algérie — nous créons des produits qui rivalisent sur la scène mondiale. Des startups en phase initiale aux grandes entreprises, nous livrons des applications web, des solutions mobiles, des systèmes d'automatisation et des produits alimentés par l'IA qui durent.",
 
     hero_badge:   "Agence Logicielle Premium · MENA",
     hero_line1:   "Nous Concevons",
@@ -158,15 +168,15 @@ export const translations = {
     sv_sub:    "Du premier produit d'une startup à la transformation numérique d'une entreprise — chaque couche, couverte.",
     sv_all:    "Tous les services",
     sv_01_title: "Applications Web",
-    sv_01_desc:  "Plateformes SaaS full-stack, tableaux de bord et apps web enterprise optimisées pour la performance et l'échelle.",
+    sv_01_desc:  "Plateformes SaaS full-stack, tableaux de bord et applications web enterprise optimisés pour la performance et l'échelle. Nous gérons tout, des interfaces React/Next.js aux backends Node.js et Python, APIs RESTful et GraphQL, et déploiements cloud natifs sur AWS, GCP ou Azure — conçus pour supporter la charge réelle dès le premier jour.",
     sv_02_title: "Applications Mobiles",
-    sv_02_desc:  "iOS & Android multi-plateformes avec une UX de qualité native et une intégration approfondie.",
+    sv_02_desc:  "Applications iOS & Android multiplateformes avec une expérience utilisateur de qualité native et une intégration approfondie. Construites avec React Native ou Flutter, nos apps mobiles se connectent à votre infrastructure, supportent l'architecture offline-first, les notifications push et l'authentification biométrique, et se déploient sur l'App Store et Google Play.",
     sv_03_title: "Logiciels Desktop",
-    sv_03_desc:  "Applications Windows, macOS et Linux conçues pour les workflows qui comptent vraiment.",
+    sv_03_desc:  "Applications Windows, macOS et Linux conçues pour les workflows qui exigent le meilleur de votre matériel. Avec Electron, Tauri ou des stacks entièrement natifs, nous construisons des outils desktop avec données locales, intégrations système, accès matériel et pipelines de déploiement enterprise — sans navigateur requis.",
     sv_04_title: "Systèmes d'Automatisation",
-    sv_04_desc:  "Automatisation de processus de bout en bout — pipelines de données, bots RPA et workflows intelligents.",
+    sv_04_desc:  "Automatisation des processus de bout en bout qui élimine les tâches répétitives et connecte l'ensemble de votre pile logicielle. Des bots RPA et pipelines webhook aux jobs ETL planifiés et intégrations personnalisées, nous automatisons les workflows qui consomment le temps de votre équipe — avec monitoring, reprise sur erreur et observabilité complète.",
     sv_05_title: "Solutions IA",
-    sv_05_desc:  "Intégrations LLM personnalisées, vision par ordinateur et modèles prédictifs pour un avantage concret et mesurable.",
+    sv_05_desc:  "Produits IA personnalisés construits sur les derniers LLMs, la vision par ordinateur et la modélisation prédictive pour de véritables résultats business. Nous concevons et déployons des pipelines RAG, des modèles de domaine affinés, des APIs d'inférence en temps réel et des fonctionnalités IA qui s'intègrent proprement dans vos systèmes existants.",
 
     st_label:  "— Notre Stack",
     st_title1: "Construit Avec Les",
@@ -242,17 +252,23 @@ export const translations = {
     ct_cta1:   "Démarrer un projet",
     ct_cta2:   "Voir nos travaux",
 
+    mac_title: "Tout ce dont vous avez besoin.",
+    mac_sub:   "Web · Mobile · Bureau · Automatisation · IA",
+
     ft_tag:  "Nous développons des solutions logicielles mondiales pour des entreprises ambitieuses — des apps web aux systèmes d'IA.",
     ft_copy: "Tous droits réservés.",
     ft_loc:  "Basé en Algérie · Disponible dans le monde entier",
   },
 
   ar: {
+    nav_home:     "الرئيسية",
     nav_services: "الخدمات",
-    nav_work:     "أعمالنا",
     nav_about:    "من نحن",
-    nav_contact:  "تواصل معنا",
-    nav_cta:      "ابدأ مشروعك",
+    nav_blogs:    "المدونة",
+    nav_cta:      "تواصل معنا",
+
+    // About
+    ab_text: "نحن وكالة هندسة برمجيات من الجزائر — نبني منتجات تنافس على الساحة العالمية. من الشركات الناشئة في مراحلها الأولى إلى المؤسسات الكبيرة، نطوّر تطبيقات الويب والحلول المحمولة وأنظمة الأتمتة والمنتجات المدعومة بالذكاء الاصطناعي التي تدوم.",
 
     hero_badge:   "وكالة برمجيات متميزة · الشرق الأوسط",
     hero_line1:   "نهندس",
@@ -274,15 +290,15 @@ export const translations = {
     sv_sub:    "من أول منتج للشركة الناشئة إلى التحول الرقمي للمؤسسة — كل طبقة، مغطاة.",
     sv_all:    "جميع الخدمات",
     sv_01_title: "تطبيقات الويب",
-    sv_01_desc:  "منصات SaaS كاملة المكدس، لوحات تحكم وتطبيقات ويب مؤسسية مهندسة للأداء والتوسع.",
+    sv_01_desc:  "منصات SaaS متكاملة ولوحات تحكم وتطبيقات ويب مؤسسية مهندسة للأداء والتوسع. نتولى كل شيء بدءاً من واجهات React/Next.js إلى خوادم Node.js وPython وواجهات برمجة RESTful وGraphQL والنشر السحابي على AWS وGCP وAzure — مبنية لتحمّل الحمل الفعلي من اليوم الأول.",
     sv_02_title: "تطبيقات الموبايل",
-    sv_02_desc:  "iOS وAndroid متعددة المنصات بجودة UX أصلية وتكامل عميق مع المنصة.",
+    sv_02_desc:  "تطبيقات iOS وAndroid متعددة المنصات بجودة UX أصيلة وتكامل عميق مع المنصة. مبنية بـ React Native أو Flutter، تتصل تطبيقاتنا ببنيتك التحتية وتدعم العمل دون إنترنت وإشعارات الدفع والمصادقة البيومترية، وتُنشر عبر App Store وGoogle Play بموثوقية إنتاجية.",
     sv_03_title: "برامج سطح المكتب",
-    sv_03_desc:  "تطبيقات Windows وmacOS وLinux مبنية لسير العمل الأكثر أهمية.",
+    sv_03_desc:  "تطبيقات Windows وmacOS وLinux مبنية لسير العمل الأكثر تطلبًا من أجهزتك. باستخدام Electron أو Tauri أو مكدسات أصلية كاملة، نبني أدوات سطح المكتب مع بيانات محلية أولاً وتكاملات على مستوى النظام وصول للأجهزة وخطوط نشر مؤسسية.",
     sv_04_title: "أنظمة الأتمتة",
-    sv_04_desc:  "أتمتة العمليات الشاملة — خطوط البيانات، روبوتات RPA وسير العمل الذكي.",
+    sv_04_desc:  "أتمتة شاملة للعمليات تُزيل المهام المتكررة وتربط منظومتك البرمجية بالكامل. من روبوتات RPA وخطوط أنابيب webhook إلى مهام ETL المجدولة والتكاملات المخصصة، نؤتمت سير العمل الذي يستنزف وقت فريقك مع مراقبة كاملة واسترداد من الأخطاء.",
     sv_05_title: "حلول الذكاء الاصطناعي",
-    sv_05_desc:  "تكاملات LLM مخصصة، رؤية الكمبيوتر ونماذج تنبؤية تمنحك ميزة قابلة للقياس.",
+    sv_05_desc:  "منتجات ذكاء اصطناعي مخصصة مبنية على أحدث نماذج اللغة الكبيرة ورؤية الكمبيوتر والنمذجة التنبؤية لتحقيق نتائج أعمال حقيقية. نصمم وننشر خطوط أنابيب RAG ونماذج الدومين المُدقّقة وواجهات برمجة الاستدلال الفوري والميزات المدعومة بالذكاء الاصطناعي التي تتكامل بسلاسة مع أنظمتك الحالية.",
 
     st_label:  "— تقنياتنا",
     st_title1: "مبني بأفضل",
@@ -357,6 +373,9 @@ export const translations = {
     ct_sub:    "بلا ثرثرة — خطة واضحة وتنفيذ محترف من اليوم الأول.",
     ct_cta1:   "ابدأ مشروعك",
     ct_cta2:   "شاهد أعمالنا",
+
+    mac_title: "كل ما تحتاجه.",
+    mac_sub:   "ويب · موبايل · سطح المكتب · أتمتة · ذكاء اصطناعي",
 
     ft_tag:  "نهندس حلولاً برمجية عالمية المستوى للأعمال الطموحة — من تطبيقات الويب إلى أنظمة الذكاء الاصطناعي.",
     ft_copy: "جميع الحقوق محفوظة.",

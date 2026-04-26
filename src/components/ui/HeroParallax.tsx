@@ -20,11 +20,24 @@ export interface ParallaxProduct {
 interface HeroParallaxProps {
   products: ParallaxProduct[];
   header: React.ReactNode;
+  isRTL?: boolean;
 }
 
-export function HeroParallax({ products, header }: HeroParallaxProps) {
+export function HeroParallax({ products, header, isRTL = false }: HeroParallaxProps) {
   const firstRow  = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
+
+  const [dims, setDims] = React.useState({ mobile: false, tablet: false });
+
+  React.useEffect(() => {
+    const update = () => setDims({ mobile: window.innerWidth < 640, tablet: window.innerWidth < 1024 });
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  const yStart = dims.mobile ? -180 : dims.tablet ? -400 : -700;
+  const yEnd   = dims.mobile ?  80  : dims.tablet ?  200 :  500;
 
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -34,18 +47,17 @@ export function HeroParallax({ products, header }: HeroParallaxProps) {
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX        = useSpring(useTransform(scrollYProgress, [0, 1], [0,    1000]), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], [0,   -1000]), springConfig);
+  const translateX        = useSpring(useTransform(scrollYProgress, [0, 1], [0, isRTL ? -1000 :  1000]), springConfig);
+  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], [0, isRTL ?  1000 : -1000]), springConfig);
   const rotateX           = useSpring(useTransform(scrollYProgress, [0, 0.2], [15,    0]), springConfig);
   const opacity           = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2,   1]), springConfig);
   const rotateZ           = useSpring(useTransform(scrollYProgress, [0, 0.2], [20,    0]), springConfig);
-  const translateY        = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
+  const translateY        = useSpring(useTransform(scrollYProgress, [0, 0.2], [yStart, yEnd]), springConfig);
 
   return (
     <div
       ref={ref}
-      className="overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-      style={{ height: 1800 }}
+      className="overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] h-[800px] sm:h-[1200px] md:h-[1800px]"
     >
       {/* Header */}
       <div className="max-w-7xl relative mx-auto py-14 px-6 w-full">
@@ -54,12 +66,12 @@ export function HeroParallax({ products, header }: HeroParallaxProps) {
 
       {/* 2 scrolling rows */}
       <motion.div style={{ rotateX, rotateZ, translateY, opacity }}>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-8 sm:space-x-14 md:space-x-20 mb-20">
           {firstRow.map((p, i) => (
             <ProductCard key={`r1-${i}`} product={p} translate={translateX} />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row space-x-20">
+        <motion.div className="flex flex-row space-x-8 sm:space-x-14 md:space-x-20">
           {secondRow.map((p, i) => (
             <ProductCard key={`r2-${i}`} product={p} translate={translateXReverse} />
           ))}
@@ -78,8 +90,8 @@ function ProductCard({
 }) {
   return (
     <motion.div
-      style={{ x: translate, width: "36rem", height: "26rem" }}
-      className="flex-shrink-0 relative overflow-hidden group cursor-pointer"
+      style={{ x: translate }}
+      className="flex-shrink-0 relative overflow-hidden group cursor-pointer w-48 h-32 sm:w-72 sm:h-52 md:w-[36rem] md:h-[26rem]"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
